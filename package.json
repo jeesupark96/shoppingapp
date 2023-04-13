@@ -1,0 +1,36 @@
+{
+  "name": "shoppingapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "node server/index.js",
+    "dev": "npm-run-all --silent --parallel dev:*",
+    "dev:client": "webpack serve --mode=development",
+    "dev:server": "nodemon server/index.js",
+    "db:import": "bash scripts/db-import.bash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeesupark96/shoppingapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeesupark96/shoppingapp/issues"
+  },
+  "homepage": "https://github.com/jeesupark96/shoppingapp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-react-jsx": "^7.21.0",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
